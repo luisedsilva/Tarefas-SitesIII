@@ -1,0 +1,19 @@
+
+<title>Lista de Tarefas</title> 
+
+<div class="tasks-container">
+  <h1>Lista de Tarefas</h1>
+  <ul>
+      <% tarefas.forEach(tarefa => { %>
+          <li>
+              <%= tarefa.title %>
+              <a href="/tarefas/delete/<%= tarefa.id_tarefa %>">Delete</a>
+          </li>
+      <% }); %>
+  </ul>
+  <form action="/tarefas" method="POST">
+      <input type="text" name="title" placeholder="Nova Tarefa">
+      <button type="submit">Adicionar</button>
+  </form>
+</div> 
+ 
